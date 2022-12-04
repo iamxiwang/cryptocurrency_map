@@ -12,19 +12,21 @@ window.fetchCountry = fetchCountry;
         google.charts.setOnLoadCallback(drawRegionsMap);
     
         function drawRegionsMap() {
-            var data = google.visualization.arrayToDataTable([
-                ['Country', 'Index Score'],['Germany', 387],
-                ['United States', 653],['Brazil',562],['Canada', 368],['France', 200],['Russia', 541],['China', 535],
-                ['India', 663],['Nigeria', 521],['Vietnam', 1000],['Philippines', 753],['Ukrian', 694],['Australia',270],
-                ['Egypy', 361],['Argentina',510],['Bolivia', 266],['Mexico', 322],['Chile', 220],['Indonesia', 396],
-                ['New Zealand', 129],['Moroco',507],
-                ['Turkey', 519],['United Kindom', 473],
-                ['Spain',297],['South Africa', 309],
-                ['Kenya', 397],['Angola', 103],
-                ['Japan', 339],['South Korea',361],['Saudi Arabia',199],['Italy',241],['Algeria',254],['Colombia',496],
-                ['Ecuador',409],['Peru',287]
+            var data = google.visualization.arrayToDataTable(
+                [
+                ['Country', 'Index Score', 'Life Expectancy'],['Germany', 387, 65],
+                ['United States', 653, 75],['Brazil',562, 70],['Canada', 368, 70],['France', 200, 70],['Russia', 541, 70],['China', 535,87],
+                ['India', 663,60],['Nigeria', 521,40],['Vietnam', 1000,67],['Philippines', 753, 66],['Ukrian', 694,66],['Australia',270, 77],
+                ['Egypy',361,65],['Argentina',510,76],['Bolivia', 266,77],['Mexico', 322,88],['Chile', 220,63],['Indonesia', 396,78],
+                ['New Zealand', 129,80],['Moroco',507,78],
+                ['Turkey', 519,66],['United Kindom', 473,66],
+                ['Spain',297,79],['South Africa', 309,56],
+                ['Kenya', 397,45],['Angola', 103,60],
+                ['Japan', 339,90],['South Korea',361,90],['Saudi Arabia',199,89],['Italy',241,80],['Algeria',254,76],['Colombia',496,66],
+                ['Ecuador',409,55],['Peru',287,62]
 
-            ]);
+            ]
+            );
 
             var options = {
                 title: 'Toppings I Like On My Pizza',
@@ -34,9 +36,9 @@ window.fetchCountry = fetchCountry;
             var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
             
             
-            //stackoverflow 
+            // let countryDisplay = document.querySelector('.detail')
             
-            function myClickHandler(){
+            async function myClickHandler(){
                 var selection = chart.getSelection();
                 // console.log(data.getValue(selection[0].row, 0))
                 let country = data.getValue(selection[0].row, 0);
@@ -48,28 +50,17 @@ window.fetchCountry = fetchCountry;
                     }
                 };
 
-                let info = fetchCountry(url, options);
-                // console.log(Array.isArray(info))
-                console.log(info.gdp)
+                let countryData = await fetchCountry(url, options);
+                console.log(countryData)
+                let name = countryData[0].name
+                let fertility = countryData[0].fertility
+                let life_expectancy = countryData[0].life_expectancy_female;
+                let internet_user = countryData[0].internet_user;
+                document.querySelector("#name").innerHTML = name;
+                document.querySelector("#fertility").innerHTML = "fertility:  " + fertility;
+                document.querySelector("#life").innerHTML = "life_expectancy_female:  " + life_expectancy;
+                document.querySelector("#internet_user").innerHTML = "internet_user: " + internet_user;
 
-                
-                //data.getValue(selection[0].row, 0) give the value of thecountry name
-                // var message = '';
-                // for (var i = 0; i < selection.length; i++) {
-                //     var item = selection[i];
-                //     if (item.row != null && item.column != null) {
-                //         message += '{row:' + item.row + ',column:' + item.column + '}';
-                //     } else if (item.row != null) {
-                //         message += '{row:' + item.row + '}';
-                //     } else if (item.column != null) {
-                //         message += '{column:' + item.column + '}';
-                //     }
-                // }
-                // if (message == '') {
-                //     message = 'nothing';
-                // }
-                // // alert('You selected ' + message);
-                // alert(`${data.getValue(selection[0].row, 0)}`)
             }
             
             google.visualization.events.addListener(chart, 'select', myClickHandler);
@@ -84,9 +75,8 @@ window.fetchCountry = fetchCountry;
         // })
 
 
-        const stacked = require('./scripts/data.js')
+        // const stacked = require('./scripts/data.js')
 
-    // console.log(fetchCountry())
 
 
 

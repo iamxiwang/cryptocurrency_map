@@ -5,8 +5,17 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
   \*****************************************************************************************************************************************/
+h1 {
+  text-align: center;
+  color: #0088a9;
+  display: block;
+  padding: 30px;
+}
+
 body {
   background-color: #CACFD2;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_bar {
@@ -64,4 +73,20 @@ button {
 
 button:hover {
   background-color: gold;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(11, 93, 30);
+  text-decoration: solid;
+  display: flex;
+  justify-content: center;
 }

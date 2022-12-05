@@ -1,28 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); 
-h1{
-    text-align: center;
-    color: #0088a9;
-    display: block;
-    padding: 30px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body {
     background-color: #CACFD2;
-    margin: 0;
-    padding: 0;
+    margin: 40px;
+    padding: 20px;
 };
+
+// nav bar area
 
 .nav_bar {
     box-sizing: boarder-box;
     margin: 0;
     padding: 0;
     background-color: #CACFD2;
+   
 
 }
 
 li, a, button{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 22px;
     color:white;
     text-decoration: solid;
 
@@ -31,8 +30,12 @@ li, a, button{
 header {
     display: flex;
     justify-content: flex-end;
+    // justify-content: first baseline;
     align-items: center;
-    padding: 15 px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 .logo {
     cursor: pointer;
@@ -45,6 +48,7 @@ header {
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
+    border-radius: 100px;
 }
 .nav_links li a {
     transition: all 0.3s  ease 0s;
@@ -65,18 +69,77 @@ button:hover {
     background-color: gold;
 }
 
+#right1:hover{
+    background-color:gold;
+}
+#right2:hover{
+    background-color:gold;
+}
+#right3:hover{
+    background-color: gold;
+}
+
+// main body css
+
+h1{
+    font-family: fantasy;;
+    font-size: 50px;
+    text-align: center;
+    color: #0088a9;
+    display: block;
+}
+
 .map {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding-left: 10cm;
+    // padding-right: -10px;
 }
+#regions_div{
+    width: 1350px; 
+    height: 550px;
+    margin: 0px;
+}
+h3 {
+    height:0px;
+}
+
 .detail {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color:rgb(11, 93, 30);
-    text-decoration: solid;
     display: flex;
-    justify-content: center;
+    margin: 10px;
+    padding: 200px;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 500;
+    font-size: 30px;
+    color: #0088a9;
+    font-family: "Montserrat", sans-serif;
+   
 
 }
+
+#oecd {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 800px;
+    font-family: fantasy;
+    font-weight: 500;
+    font-size: 33px;
+    color:#0088a9;
+    text-decoration: solid;
+}
+
+
+#countryname {
+    font-weight: 500;font-size: 60px;
+    font-family: Fredoka One;
+    color: #0088a9;
+    text-decoration: solid;
+}
+
+
+

@@ -1,0 +1,27 @@
+
+
+
+
+.detail {
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: space-between;
+    align-items: space-between;
+    font-weight: 500;
+    font-size:  15px;
+    color: #0088a9;
+    font-family: fantasy;
+  
+
+}
+
+
+#countryname {
+    font-weight: 250;
+    font-size: 20px;
+    font-family: Fredoka One;
+    color: #0088a9;
+    text-decoration: solid;
+}
+

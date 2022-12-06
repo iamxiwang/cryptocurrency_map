@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+@import url('./styles/category');
+@import url('./styles/chart_display');
+@import url('./styles/mapLeft');
+
 body {
     background-color: #CACFD2;
     margin: 40px;
@@ -93,53 +97,33 @@ h1{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-left: 10cm;
+    padding-left: 3cm;
+    padding-right: 3cm;
     // padding-right: -10px;
 }
 #regions_div{
+    width: 1000px; 
+    height: 400px;
+    margin: 0px;
+}
+#chart_div {
     width: 1350px; 
     height: 550px;
     margin: 0px;
+}
+
+#middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h3 {
     height:0px;
 }
 
-.detail {
-    display: flex;
-    margin: 10px;
-    padding: 200px;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-weight: 500;
-    font-size: 30px;
-    color: #0088a9;
-    font-family: "Montserrat", sans-serif;
-   
-
-}
-
-#oecd {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    flex-direction: column;
-    height: auto;
-    width: 800px;
-    font-family: fantasy;
-    font-weight: 500;
-    font-size: 33px;
-    color:#0088a9;
-    text-decoration: solid;
-}
 
 
-#countryname {
-    font-weight: 500;font-size: 60px;
-    font-family: Fredoka One;
-    color: #0088a9;
-    text-decoration: solid;
-}
+
 
 
 

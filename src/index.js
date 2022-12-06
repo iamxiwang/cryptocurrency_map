@@ -1,8 +1,12 @@
 const { async } = require("regenerator-runtime");
 
 import fetchCountry from "./scripts/country_api";
+import popChart from "./scripts/newEmbed.js";
+import drawChart from "./scripts/cancerDeath_chart.js";
+import banana from './scripts/sucide_chart.js';
 
 window.fetchCountry = fetchCountry;
+window.popChart = popChart;
 
         google.charts.load('current', {
         'packages':['geochart'],
@@ -94,28 +98,15 @@ window.fetchCountry = fetchCountry;
                 let name = countryData[0].name
                 let fertility = countryData[0].fertility
                 let life_expectancy = countryData[0].life_expectancy_male;
-                let internet_user = countryData[0].internet_users;
-                let exports =  countryData[0].exports;
-                let gdp_growth =  countryData[0].gdp_growth;
-                let gdp_per_capita =  countryData[0].gdp_per_capita;
                 let homicide_rate =  countryData[0].homicide_rate ;
-                let imports =  countryData[0].improts;
                 let infant_mortality =  countryData[0].infant_mortality;
 
-                document.querySelector("#countryname").innerHTML = name;
+                document.querySelector("#countryname").innerHTML = name + ":)";
                 document.querySelector("#fertility").innerHTML = "Fertility:   " + fertility +'(birth/woman)';
                 document.querySelector("#life").innerHTML = "Life Expectancy Male: " + life_expectancy +'years';
-                document.querySelector("#internet_user").innerHTML = "Internet_Users:   " + internet_user +'%';
-
-                document.querySelector("#export").innerHTML = "exports:" + exports;
-
-                document.querySelector("#gdp_growth").innerHTML = "Gdp Growth:" + gdp_growth;
-
-                document.querySelector("#gdp_per_capita").innerHTML ="Gdp Per Capita:" + gdp_per_capita;
 
                 document.querySelector("#homecide_rate").innerHTML ="Homecide Rate:" + homicide_rate + "%";
 
-                document.querySelector("#import").innerHTML ="Import: "+ imports;
 
                 document.querySelector("#infant_mortality").innerHTML = "Infant Mortality:" + infant_mortality;
 
@@ -133,7 +124,8 @@ window.fetchCountry = fetchCountry;
         // })
 
 
-        // const stacked = require('./scripts/data.js')
+
+
 
 
 

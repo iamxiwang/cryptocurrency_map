@@ -6,6 +6,76 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
   \*****************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap);
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/category.css ***!
+  \*******************************************************************************************************/
+
+
+
+#category {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+}
+
+
+#category button{
+        display: inline-block;
+        font-size: 22px;
+        margin: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 100%;
+        cursor:  pointer;
+}
+
+
+#category button:hover {
+        background-color:#ec8f6e;
+}
+
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/chart_display.css ***!
+  \************************************************************************************************************/
+
+.parseData{
+    display: flex;
+    justify-content: center;
+
+    
+}
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/mapLeft.css ***!
+  \******************************************************************************************************/
+
+
+
+
+.detail {
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: space-between;
+    align-items: space-between;
+    font-weight: 500;
+    font-size:  15px;
+    color: #0088a9;
+    font-family: fantasy;
+  
+
+}
+
+
+#countryname {
+    font-weight: 250;
+    font-size: 20px;
+    font-family: Fredoka One;
+    color: #0088a9;
+    text-decoration: solid;
+}
+
+
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (2) ***!
   \*****************************************************************************************************************************************/
@@ -100,49 +170,28 @@ h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-left: 10cm;
+  padding-left: 3cm;
+  padding-right: 3cm;
 }
 
 #regions_div {
+  width: 1000px;
+  height: 400px;
+  margin: 0px;
+}
+
+#chart_div {
   width: 1350px;
   height: 550px;
   margin: 0px;
 }
 
+#middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h3 {
   height: 0px;
-}
-
-.detail {
-  display: flex;
-  margin: 10px;
-  padding: 200px;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-weight: 500;
-  font-size: 30px;
-  color: #0088a9;
-  font-family: "Montserrat", sans-serif;
-}
-
-#oecd {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: auto;
-  width: 800px;
-  font-family: fantasy;
-  font-weight: 500;
-  font-size: 33px;
-  color: #0088a9;
-  text-decoration: solid;
-}
-
-#countryname {
-  font-weight: 500;
-  font-size: 60px;
-  font-family: Fredoka One;
-  color: #0088a9;
-  text-decoration: solid;
 }

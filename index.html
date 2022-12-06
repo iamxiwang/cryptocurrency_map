@@ -16,10 +16,9 @@
     </head>
 
     <body>
-       
         <div class="nav_bar">
             <header>
-                <img class= "logo" src="AAlogo.png" alt="logo">
+                <img class= "logo" src="src/styles/AAlogo.png" alt="logo">
                 <nav>
                     <ul class="nav_links">
                         <li id="right1"><a href="https://github.com/iamxiwang" target="_blank">Github</a></li>
@@ -31,37 +30,50 @@
             </header>
         </div>
 
-        <h1>Life Expectancy at Birth for Countries </h1>
+        <h1>Life Expectancy for OEDC Countries </h1>
         <div class="map">
-            <div id="oecd">
-                <h3>life</h3>
-                <p> Life expectancy at birth is defined as how long, on average, a newborn can expect to live, if current death rates do not change. However, the actual age-specific death rate of any particular birth cohort cannot be known in advance. Life expectancy at birth is one of the most frequently used health status indicators. 
+            <div class="detail">
+                <p style="font-family: fantasy; font-size: medium;"> Life expectancy at birth is defined as how long, on average, a newborn can expect to live.  Life expectancy at birth is one of the most frequently used health status indicators
                 </p>
+                <div id ="countryname"></div><br>
+                <div id="time">
+                    <div id="life"></div>
+                    <div id="homecide_rate"></div>
                 </div>
-            <div id="regions_div">
+                <div id="human">
+                    <div id="fertility"></div>
+                    <div id="infant_mortality"></div>
+                </div>   
+            </div>
+        
+            <div id="middle">
+                <div id="regions_div"></div>
+                <p> OECD (2022), Life expectancy at birth (indicator). doi: 10.1787/27e0fc9d-en (Accessed on 05 December 2022)</p>
+            </div>
+           
+    
+            <div id="category">
+                <a class="cta" href="#firstchart" id="suicide"><button>Suicide Rate</button></a>
+               
+                <a class="cta" href="#secondchart" id="cancer"><button>Death from Cancer</button></a>
+                <a class="cta" href="#thirdchart" id="lost"><button>Potential Life Lost</button></a>
+            </div>
         </div>
     
     </div>
+    <br>
 
-        <div class="detail">
-            <div id ="countryname"></div>
-            <div id="ecnomic">
-                <div id="gdp_growth"></div>
-                <div id="gdp_per_capita"></div>
-                <div id="export"></div>
-                <div id="import"></div>
-            </div>
-            <div id="time">
-                <div id="life"></div>
-                <div id="homecide_rate"></div>
-            </div>
-            <div id="human">
-                <div id="fertility"></div>
-                <div id="infant_mortality"></div>
-                <div id="internet_user"></div>
-            </div>
-            
-        </div>
+    <div class="parseData">
+        <div id="firstchart" style="width: 1500px; height: 500px;"></div>  
+    </div>
+    <div class="parseData">
+        <div id="secondchart" style="width: 1500px; height: 500px;"></div>
+    </div>
+
+    <div class="parseData">
+        <div id="thirdchart" style="width: 1500px; height: 500px;"></div>
+    </div>
+
     </body>
 
 </html>

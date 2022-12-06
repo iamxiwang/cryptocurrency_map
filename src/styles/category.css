@@ -1,0 +1,25 @@
+
+
+
+#category {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+}
+
+
+#category button{
+        display: inline-block;
+        font-size: 22px;
+        margin: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 100%;
+        cursor:  pointer;
+}
+
+
+#category button:hover {
+        background-color:#ec8f6e;
+}

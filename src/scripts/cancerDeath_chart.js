@@ -21,7 +21,7 @@ function handleQueryResponse(response) {
         backgroundColor: {fill: '#CACFD2'}}
 
     var data = response.getDataTable();
-    var chart = new google.visualization.ColumnChart(document.getElementById('secondchart'));
+    var chart = new google.visualization.PieChart(document.getElementById('secondchart'));
     chart.draw(data, options);
 }
 

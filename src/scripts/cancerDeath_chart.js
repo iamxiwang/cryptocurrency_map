@@ -4,7 +4,7 @@ google.charts.load('current', {packages: ['corechart', 'bar']});
 
 
 let cancerURL ="https://docs.google.com/spreadsheets/d/1YHhFEnAybO0rtk7HtAhZ1FBRO8tAsWxMdjOkEUllzbA/edit#gid=1686077019"
-let suicideUrl ="https://docs.google.com/spreadsheets/d/1YHhFEnAybO0rtk7HtAhZ1FBRO8tAsWxMdjOkEUllzbA/edit#gid=217321116"
+
 
 function drawColumnChart() {
     var query = new google.visualization.Query(cancerURL);
@@ -16,9 +16,20 @@ function handleQueryResponse(response) {
         return;
     }       
     var options = {
-        title: "Deaths from Cancer Total (Per 100 000 persons, 2020 or latest available)",
-        colors: ["#16537e" ],
-        backgroundColor: {fill: '#CACFD2'}}
+        title: "Deaths from Cancer (Total Per 100,000 persons)",
+        titleTextStyle: {
+            fontSize: 25,
+          },
+        colors: ["#088da5"],
+        colors: ["#16537e","#d4af37","#f1dede" ,"#cfe8ef","#f5dd90","#e5f9e0",
+                    "#995253","#002fa7","#c5987b","#f1c800" ,"#e2679f","#735e7d","#133337","#ff5733","#85bb65","#394c1e","#85bb65"],
+
+        backgroundColor: {fill: '#CACFD2'},
+        is3D: true,
+        
+        animation: {"startup": true, duration: 1000,
+        easing: 'out'}
+        }
 
     var data = response.getDataTable();
     var chart = new google.visualization.PieChart(document.getElementById('secondchart'));
@@ -27,11 +38,22 @@ function handleQueryResponse(response) {
 
 
 let selectCancer = document.querySelector('#cancer');
-let selectSuicide = document.querySelector('#suicide');
-let selectLost = document.querySelector('#lost');
+let chartDisplay = document.querySelector(".parseData")
+// function clearChildren(){
+//     const chartContainer = document.querySelector(".parseData");
+//     chartContainer.children
+// }
 
-function cancerHandler(){
+function cancerHandler(e){
+    e.preventDefault();
+    chartDisplay.childNodes.forEach(node => node.remove())
+    let newChart = document.createElement("div");
+    newChart.id = "secondchart";
+    newChart.style = "width: 2000px; height: 800px;"
+   
+    chartDisplay.appendChild(newChart)
     google.charts.setOnLoadCallback(drawColumnChart);
+    document.querySelector("#secondchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 }
 
 

@@ -4,6 +4,7 @@ import fetchCountry from "./scripts/country_api";
 import popChart from "./scripts/newEmbed.js";
 import drawChart from "./scripts/cancerDeath_chart.js";
 import banana from './scripts/sucide_chart.js';
+import lostYears from './scripts/lostYears.js'
 
 window.fetchCountry = fetchCountry;
 window.popChart = popChart;
@@ -82,9 +83,18 @@ window.popChart = popChart;
             // let countryDisplay = document.querySelector('.detail')
             
             async function myClickHandler(){
+                //At the begnning load the click,  them remove it
+
+                let click = document.getElementById("click")
+                if(click){
+                    click.remove();
+                }
+
+
                 var selection = chart.getSelection();
                 // console.log(data.getValue(selection[0].row, 0))
                 let country = data.getValue(selection[0].row, 0);
+
                 let url= 'https://api.api-ninjas.com/v1/country?name='+ country
                 const options = {
                     method: 'GET',

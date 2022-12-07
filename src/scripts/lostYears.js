@@ -1,1 +1,60 @@
+
+google.charts.load('current', {packages: ['corechart', 'bar']});
+
+
+let lostURL = "https://docs.google.com/spreadsheets/d/1dSar4PNf5y55-0NEczSEdqRxk4wl5r6wXIM5DYny92U/edit#gid=1988260332"
+
+
+function drawColumnChart() {
+    var query = new google.visualization.Query(lostURL);
+    query.send(handleQueryResponse);
+}
+function handleQueryResponse(response) {
+    if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+    }       
+    var options = {
+        title: "Potential years of life lost (Total, Per 100 000 inhabitants aged 0-69)",
+        titleTextStyle: {
+            fontSize: 25,
+          },
+        colors: ["#be1818"],
+        backgroundColor: {fill: '#CACFD2'},
+
+        animation: {"startup": true, duration: 2000,
+        easing: 'out',
+        }
+    }
+
+    var data = response.getDataTable();
+    var chart = new google.visualization.LineChart(document.getElementById('thirdchart'));
+    chart.draw(data, options);
+}
+
+
+
 let selectLost = document.querySelector('#lost');
+let chartDisplay = document.querySelector(".parseData")
+
+function lostHandler(e){
+    e.preventDefault();
+    while( chartDisplay.firstChild){
+        chartDisplay.removeChild(chartDisplay.lastChild);
+        
+    };
+    let newChart = document.createElement("div");
+    newChart.id = "thirdchart";
+    newChart.style = "width: 1600px; height: 800px;"
+    
+    chartDisplay.appendChild(newChart)
+
+    
+    google.charts.setOnLoadCallback(drawColumnChart);
+
+    document.querySelector("#thirdchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+}
+
+
+
+selectLost.addEventListener('click', lostHandler);

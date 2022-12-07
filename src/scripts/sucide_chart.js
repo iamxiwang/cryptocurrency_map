@@ -13,9 +13,17 @@ function handleQueryResponse(response) {
         return;
     }       
     var options = {
-        title: "Suicide rates Total (Per 100 000 persons, 2020 or latest available)",
-        colors: ["#16537e" ],
-        backgroundColor: {fill: '#CACFD2'}}
+        title: "Suicide rates (Total Per 100,000 persons)",
+        titleTextStyle: {
+            fontSize: 25,
+        },
+        colors: ["#088da5"],
+        backgroundColor: {fill: '#CACFD2'},
+
+        animation: {"startup": true, duration: 2000,
+        easing: 'out'
+        }
+    }
 
     var data = response.getDataTable();
     var chart = new google.visualization.ColumnChart(document.getElementById('firstchart'));
@@ -25,9 +33,23 @@ function handleQueryResponse(response) {
 
 
 let selectSuicide = document.querySelector('#suicide');
+let chartDisplay = document.querySelector(".parseData")
 
-function suicideHandler(){
+function suicideHandler(e){
+    e.preventDefault();
+    while( chartDisplay.firstChild){
+        chartDisplay.removeChild(chartDisplay.lastChild);
+        
+    };
+    let newChart = document.createElement("div");
+    newChart.id = "firstchart";
+    newChart.style = "width: 1600px; height: 800px;"
+    
+    chartDisplay.appendChild(newChart)
+
+    
     google.charts.setOnLoadCallback(drawColumnChart);
+    document.querySelector("#firstchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 }
 
 

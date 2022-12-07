@@ -5,23 +5,31 @@
 .detail {
     display: flex;
     flex-direction: column;
-  
+    margin-left: 3cm;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: space-evenly;
     font-weight: 500;
-    font-size:  15px;
+    font-size: 30px;
     color: #0088a9;
-    font-family: fantasy;
+    font-family: "Montserrat", sans-serif;
   
 
 }
 
+#click{
+    color:indigo;
+
+}
 
 #countryname {
     font-weight: 250;
-    font-size: 20px;
+    font-size: 30px;
     font-family: Fredoka One;
     color: #0088a9;
     text-decoration: solid;
+}
+
+#time, #human {
+    font-size: 20px;
 }
 

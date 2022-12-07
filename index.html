@@ -10,6 +10,7 @@
         <script src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="./dist/main.js" defer></script>
+        <script src="https://kit.fontawesome.com/6cc95cf3ca.js" crossorigin="anonymous"></script>
        
 
         <title>Countries life expectancy fertility </title>
@@ -21,20 +22,29 @@
                 <img class= "logo" src="src/styles/AAlogo.png" alt="logo">
                 <nav>
                     <ul class="nav_links">
-                        <li id="right1"><a href="https://github.com/iamxiwang" target="_blank">Github</a></li>
-                        <li id="right2"><a href="#" target="_blank"> Linkedin</a></li>
-                        <li id="right3"><a href="#" target="_blank"> About</a></li>
+                        <li id="right1"><a href="https://github.com/iamxiwang" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
+                        <li id="right2"><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkdin</a></li>
+                        <li id="right3">
+                            <a href="#" target="_blank"> Project &#9662</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                            </ul>
+                        
+                        
+                        </li>
                     </ul>
                 </nav>
                 <a class="cta" href="#"><button>Contact</button></a>
             </header>
         </div>
-
         <h1>Life Expectancy for OEDC Countries </h1>
         <div class="map">
             <div class="detail">
-                <p style="font-family: fantasy; font-size: medium;"> Life expectancy at birth is defined as how long, on average, a newborn can expect to live.  Life expectancy at birth is one of the most frequently used health status indicators
-                </p>
+                <div id="click">Click The Country <i class="fa-solid fa-hand-point-right"></i>
+                </div>
+                <br>
                 <div id ="countryname"></div><br>
                 <div id="time">
                     <div id="life"></div>
@@ -53,25 +63,19 @@
            
     
             <div id="category">
-                <a class="cta" href="#firstchart" id="suicide"><button>Suicide Rate</button></a>
+                <a class="cta"  id="suicide"><button>Suicide Rate</button></a>
                
-                <a class="cta" href="#secondchart" id="cancer"><button>Death from Cancer</button></a>
-                <a class="cta" href="#thirdchart" id="lost"><button>Potential Life Lost</button></a>
+                <a class="cta" id="cancer"><button>Death from Cancer</button></a>
+                <a class="cta"  id="lost"><button>Potential Life Lost</button></a>
             </div>
         </div>
     
     </div>
-    <br>
+    
+    <hr>
 
-    <div class="parseData">
-        <div id="firstchart" style="width: 1500px; height: 500px;"></div>  
-    </div>
-    <div class="parseData">
-        <div id="secondchart" style="width: 1500px; height: 500px;"></div>
-    </div>
 
-    <div class="parseData">
-        <div id="thirdchart" style="width: 1500px; height: 500px;"></div>
+    <div class="parseData" >
     </div>
 
     </body>

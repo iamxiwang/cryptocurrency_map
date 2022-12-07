@@ -26,7 +26,7 @@
         margin: 10px 20px;
         cursor: pointer;
         border: none;
-        border-radius: 100%;
+        border-radius: 30px;
         cursor:  pointer;
 }
 
@@ -41,7 +41,12 @@
 
 .parseData{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    /* margin-left: 3cm; */
+   
 
     
 }
@@ -55,24 +60,32 @@
 .detail {
     display: flex;
     flex-direction: column;
-  
+    margin-left: 3cm;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: space-evenly;
     font-weight: 500;
-    font-size:  15px;
+    font-size: 30px;
     color: #0088a9;
-    font-family: fantasy;
+    font-family: "Montserrat", sans-serif;
   
 
 }
 
+#click{
+    color:indigo;
+
+}
 
 #countryname {
     font-weight: 250;
-    font-size: 20px;
+    font-size: 30px;
     font-family: Fredoka One;
     color: #0088a9;
     text-decoration: solid;
+}
+
+#time, #human {
+    font-size: 20px;
 }
 
 
@@ -80,6 +93,8 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (2) ***!
   \*****************************************************************************************************************************************/
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #CACFD2;
   margin: 40px;
   padding: 20px;
@@ -113,7 +128,7 @@ header {
 .logo {
   cursor: pointer;
   margin-right: auto;
-  height: 80px;
+  height: 70px;
 }
 
 .nav_links {
@@ -131,10 +146,14 @@ header {
   color: #0088a9;
 }
 
+.nav_links li a i {
+  font-size: 25px;
+}
+
 button {
   margin-left: 20px;
   margin-right: auto;
-  padding: 9px 25px;
+  padding: 7px 23px;
   background-color: rgb(0, 136, 169);
   border: none;
   border-radius: 50px;
@@ -158,6 +177,19 @@ button:hover {
   background-color: gold;
 }
 
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#right3:hover .dropdown {
+  display: block;
+}
+
 h1 {
   font-family: fantasy;
   font-size: 50px;
@@ -176,7 +208,7 @@ h1 {
 
 #regions_div {
   width: 1000px;
-  height: 400px;
+  height: 680px;
   margin: 0px;
 }
 
@@ -194,4 +226,12 @@ h1 {
 
 h3 {
   height: 0px;
+}
+
+hr {
+  width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: #666;
 }

@@ -15,7 +15,7 @@ function handleQueryResponse(response) {
         return;
     }       
     var options = {
-        title: "Potential years of life lost (Total, Per 100 000 inhabitants aged 0-69, 2020 or latest available)",
+        title: "Potential years of life lost (Total, Per 100,000 inhabitants aged 0-69, 2020 or latest available)",
         titleTextStyle: {
             fontSize: 20,
         },
@@ -45,7 +45,7 @@ function lostHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "thirdchart";
-    newChart.style = "width: 1600px; height: 800px;"
+    newChart.style = "width: 1600px; height: 870px;"
     
     chartDisplay.appendChild(newChart)
 

@@ -57,8 +57,6 @@ const countries = [
 
 let i = 0;
 let text = "United States";
-// let countriesNames = Object.keys(staticData.countries)
-// document.querySelector(".headline h2 span").innerHTML = countriesNames.length;
 export function _getChangedText() {
     i = (i + 1) % countries.length;
     return text.replace(/United States/, countries[i]);

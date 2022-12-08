@@ -18,7 +18,7 @@ function handleQueryResponse(response) {
     var options = {
         title: "Deaths from Cancer (Total Per 100,000 persons)",
         titleTextStyle: {
-            fontSize: 25,
+            fontSize: 20,
           },
         colors: ["#088da5"],
         colors: ["#16537e","#d4af37","#f1dede" ,"#cfe8ef","#f5dd90","#e5f9e0",
@@ -49,7 +49,7 @@ function cancerHandler(e){
     chartDisplay.childNodes.forEach(node => node.remove())
     let newChart = document.createElement("div");
     newChart.id = "secondchart";
-    newChart.style = "width: 2000px; height: 800px;"
+    newChart.style = "width: 1400px; height: 800px;"
    
     chartDisplay.appendChild(newChart)
     google.charts.setOnLoadCallback(drawColumnChart);

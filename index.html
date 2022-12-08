@@ -13,18 +13,19 @@
         <script src="https://kit.fontawesome.com/6cc95cf3ca.js" crossorigin="anonymous"></script>
        
 
-        <title>Countries life expectancy fertility </title>
+        <title>Life Expectancy Data Visualization </title>
     </head>
 
     <body>
         <div class="nav_bar">
             <header>
                 <img class= "logo" src="src/styles/AAlogo.png" alt="logo">
+                <!-- <div class= "logo"><i class="fa-brands fa-square-js"></i> JavaScript Project</div> -->
                 <nav>
                     <ul class="nav_links">
                         <li id="right1"><a href="https://github.com/iamxiwang" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
-                        <li id="right2"><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkdin</a></li>
-                        <li id="right3">
+                        <li id="right2"><a href="https://www.linkedin.com/in/xi-wang-7b00bb25a/" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkdin</a></li>
+                        <!-- <li id="right3">
                             <a href="#" target="_blank"> Project &#9662</a>
                             <ul class="dropdown">
                                 <li><a href="#">Link 1</a></li>
@@ -33,17 +34,21 @@
                             </ul>
                         
                         
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
-                <a class="cta" href="#"><button>Contact</button></a>
+                <a class="cta" href="mailto:vivian.xi.wang@gmail.com"><button>Contact</button></a>
             </header>
         </div>
-        <h1>Life Expectancy for OEDC Countries </h1>
+        <div id="title">
+            <h1>Life Expectancy for OEDC Countries  <i class="fa-sharp fa-solid fa-earth-americas"></i> </h1>
+            <h1 id="corgi">United States</h1>
+        </div>
         <div class="map">
             <div class="detail">
-                <div id="click">Click The Country <i class="fa-solid fa-hand-point-right"></i>
+                <div id="click">Move Mouse to Map <i class="fa-solid fa-hand-point-right"></i>
                 </div>
+                
                 <br>
                 <div id ="countryname"></div><br>
                 <div id="time">
@@ -72,12 +77,16 @@
     
     </div>
     
-    <hr>
+    
 
 
     <div class="parseData" >
     </div>
 
     </body>
+    <footer>
+        <hr>
+    <p>© OEDC Organisation for Economic Co-operation and Development</p>
+    </footer>
 
 </html>

@@ -15,11 +15,11 @@ function handleQueryResponse(response) {
         return;
     }       
     var options = {
-        title: "Potential years of life lost (Total, Per 100 000 inhabitants aged 0-69)",
+        title: "Potential years of life lost (Total, Per 100 000 inhabitants aged 0-69, 2020 or latest available)",
         titleTextStyle: {
-            fontSize: 25,
-          },
-        colors: ["#be1818"],
+            fontSize: 20,
+        },
+        colors: ["#088da5"],
         backgroundColor: {fill: '#CACFD2'},
 
         animation: {"startup": true, duration: 2000,
@@ -28,7 +28,7 @@ function handleQueryResponse(response) {
     }
 
     var data = response.getDataTable();
-    var chart = new google.visualization.LineChart(document.getElementById('thirdchart'));
+    var chart = new google.visualization.BarChart(document.getElementById('thirdchart'));
     chart.draw(data, options);
 }
 

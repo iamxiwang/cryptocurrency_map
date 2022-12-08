@@ -13,7 +13,7 @@ function handleQueryResponse(response) {
         return;
     }       
     var options = {
-        title: "Suicide rates (Total Per 100,000 persons)",
+        title: "Suicide Rates (Total, Per 100 000 persons, 2020 or latest available)",
         titleTextStyle: {
             fontSize: 25,
         },
@@ -43,7 +43,7 @@ function suicideHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "firstchart";
-    newChart.style = "width: 1600px; height: 800px;"
+    newChart.style = "width: 1400px; height: 800px;"
     
     chartDisplay.appendChild(newChart)
 

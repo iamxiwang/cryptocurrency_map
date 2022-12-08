@@ -5,6 +5,7 @@ import popChart from "./scripts/newEmbed.js";
 import drawChart from "./scripts/cancerDeath_chart.js";
 import banana from './scripts/sucide_chart.js';
 import lostYears from './scripts/lostYears.js'
+import { _changeText, _getChangedText} from './scripts/dynamicCountry'
 
 window.fetchCountry = fetchCountry;
 window.popChart = popChart;
@@ -82,57 +83,67 @@ window.popChart = popChart;
             
             // let countryDisplay = document.querySelector('.detail')
             
-            async function myClickHandler(){
-                //At the begnning load the click,  them remove it
+            // function myHandler(){
+            //     //At the begnning load the mousemove,  them remove it
 
-                let click = document.getElementById("click")
-                if(click){
-                    click.remove();
-                }
+            //     let click = document.getElementById("click")
+            //     let corgi = document.getElementById("corgi")
+            //     if(click){
+            //         click.remove();
+                   
+            //     }
 
-
-                var selection = chart.getSelection();
-                // console.log(data.getValue(selection[0].row, 0))
-                let country = data.getValue(selection[0].row, 0);
-
-                let url= 'https://api.api-ninjas.com/v1/country?name='+ country
-                const options = {
-                    method: 'GET',
-                    headers: {
-                        'X-Api-Key': '3MVGSA9TAfSZQhKQlKPpNw==GRZgynITfrn1zeHX'
-                    }
-                };
-
-                let countryData = await fetchCountry(url, options);
-                console.log(countryData)
-                let name = countryData[0].name
-                let fertility = countryData[0].fertility
-                let life_expectancy = countryData[0].life_expectancy_male;
-                let homicide_rate =  countryData[0].homicide_rate ;
-                let infant_mortality =  countryData[0].infant_mortality;
-
-                document.querySelector("#countryname").innerHTML = name + ":)";
-                document.querySelector("#fertility").innerHTML = "Fertility:   " + fertility +'(birth/woman)';
-                document.querySelector("#life").innerHTML = "Life Expectancy Male: " + life_expectancy +'years';
-
-                document.querySelector("#homecide_rate").innerHTML ="Homecide Rate:" + homicide_rate + "%";
+            //     corgi.innerHTML = "Loading the data"
+                
 
 
-                document.querySelector("#infant_mortality").innerHTML = "Infant Mortality:" + infant_mortality;
+            //     // var selection = chart.getSelection();
+            //     // // console.log(data.getValue(selection[0].row, 0))
+            //     // let country = data.getValue(selection[0].row, 0);
 
-            }
+            //     // let url= 'https://api.api-ninjas.com/v1/country?name='+ country
+            //     // const options = {
+            //     //     method: 'GET',
+            //     //     headers: {
+            //     //         'X-Api-Key': '3MVGSA9TAfSZQhKQlKPpNw==GRZgynITfrn1zeHX'
+            //     //     }
+            //     // };
+
+            //     // let countryData = await fetchCountry(url, options);
+            //     // console.log(countryData)
+            //     // let name = countryData[0].name
+            //     // let fertility = countryData[0].fertility
+            //     // let life_expectancy = countryData[0].life_expectancy_male;
+            //     // let homicide_rate =  countryData[0].homicide_rate ;
+            //     // let infant_mortality =  countryData[0].infant_mortality;
+
+            //     // document.querySelector("#countryname").innerHTML = name + ":)";
+            //     // document.querySelector("#fertility").innerHTML = "Fertility:   " + fertility +'(birth/woman)';
+            //     // document.querySelector("#life").innerHTML = "Life Expectancy Male: " + life_expectancy +'years';
+
+            //     // document.querySelector("#homecide_rate").innerHTML ="Homecide Rate:" + homicide_rate + "%";
+
+
+            //     // document.querySelector("#infant_mortality").innerHTML = "Infant Mortality:" + infant_mortality;
+
+            // }
             
-            google.visualization.events.addListener(chart, 'select', myClickHandler);
+            // google.visualization.events.addListener(chart, 'select', myHandler);
             
             chart.draw(data, options);
 
         }
-
+        // when you click the map, the <div id="click"/div> get removed
+        
         // const map = document.querySelector("#regions_div")
         // map.addEventListener("click",  (e) => {
-        //     // console.log(e.target.region)
+        //     let click = document.getElementById("click")
+        //     if(click){
+        //         click.remove();
+        //     }
         // })
-
+        // setInterval(myTimer, 1000);
+        setInterval(_changeText, 1000);
 
 
 

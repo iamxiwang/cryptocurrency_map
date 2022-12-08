@@ -22,8 +22,8 @@
 
 #category button{
         display: inline-block;
-        font-size: 22px;
-        margin: 10px 20px;
+        font-size: 15px;
+        margin: 8px 20px;
         cursor: pointer;
         border: none;
         border-radius: 30px;
@@ -44,11 +44,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
-    /* margin-left: 3cm; */
-   
-
-    
+    margin-top: 10;
+    padding-left: 20px;
 }
 /*!******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/mapLeft.css ***!
@@ -60,23 +57,20 @@
 .detail {
     display: flex;
     flex-direction: column;
-    margin-left: 3cm;
+    margin-left: 1cm;
     justify-content: space-between;
     align-items: space-evenly;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 20px;
     color: #0088a9;
     font-family: "Montserrat", sans-serif;
-  
+    width: 100px;
 
 }
 
-#click{
-    color:indigo;
 
-}
 
-#countryname {
+/* #countryname {
     font-weight: 250;
     font-size: 30px;
     font-family: Fredoka One;
@@ -86,9 +80,25 @@
 
 #time, #human {
     font-size: 20px;
+} */
+
+
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scripts/title.css ***!
+  \*****************************************************************************************************/
+
+#title {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #0088a9;}
+    
+
+#corgi{
+    text-align: left;
+    width: 25vw;
+    padding-left: 10px;
 }
-
-
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (2) ***!
   \*****************************************************************************************************************************************/
@@ -104,13 +114,12 @@ body {
   box-sizing: boarder-box;
   margin: 0;
   padding: 0;
-  background-color: #CACFD2;
 }
 
 li, a, button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 16px;
   color: white;
   text-decoration: solid;
 }
@@ -126,9 +135,8 @@ header {
 }
 
 .logo {
-  cursor: pointer;
   margin-right: auto;
-  height: 70px;
+  height: 60px;
 }
 
 .nav_links {
@@ -137,17 +145,18 @@ header {
 
 .nav_links li {
   display: inline-block;
-  padding: 0px 20px;
   border-radius: 100px;
 }
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
   color: #0088a9;
+  padding: 0px 20px;
+  font-size: 16px;
 }
 
 .nav_links li a i {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 button {
@@ -181,20 +190,17 @@ button:hover {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 #right3:hover .dropdown {
   display: block;
+  border-radius: 15px;
 }
 
-h1 {
-  font-family: fantasy;
-  font-size: 50px;
-  text-align: center;
-  color: #0088a9;
+#right3 ul.dropdown li {
   display: block;
 }
 
@@ -202,18 +208,18 @@ h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-left: 3cm;
-  padding-right: 3cm;
+  padding-left: 1.2cm;
+  padding-right: 1.5cm;
 }
 
 #regions_div {
-  width: 1000px;
-  height: 680px;
+  width: 750px;
+  height: 500px;
   margin: 0px;
 }
 
 #chart_div {
-  width: 1350px;
+  width: 1300px;
   height: 550px;
   margin: 0px;
 }
@@ -229,7 +235,6 @@ h3 {
 }
 
 hr {
-  width: 1500px;
   margin-left: auto;
   margin-right: auto;
   height: 1px;

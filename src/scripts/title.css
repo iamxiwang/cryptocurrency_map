@@ -1,0 +1,13 @@
+
+#title {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #0088a9;}
+    
+
+#corgi{
+    text-align: left;
+    width: 25vw;
+    padding-left: 10px;
+}

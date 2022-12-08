@@ -17,10 +17,12 @@ Table of Contents
 4) Other Resources
 
 
-## Backgroud
+# Backgroud
 ---
 
-    Life expectancy at birth is one of the most frequently used health status indicators. 
+    Life expectancy at birth is defined as how long, on average, a newborn can expect to live.
+    Deaths from cancer. There are more than 100 different types of cancers. For a large number of cancer types, the risk of developing the disease rises with age. 
+    Potential Years of Life Lost (PYLL) involves summing up deaths occurring at each age and multiplying this with the number of remaining years to live up to a selected age limit (age 75 is used in OECD Health Statistics).
 
     I build this project using vanila javascript, google chart to visualize the data from OEDC.org countries life related data
     The data of this project is from OEDC.org.The OECD Data is a database containing hundreds of statistical time series for the Organization for Economic Cooperation and Development (OECD) and selected non-member counties. It covers broad topics including agriculture, development, education, employment, energy, environment, finance, health, and government. It also allows us to explore the data by country. Available data file formats CSV
@@ -28,18 +30,18 @@ Table of Contents
     What is OEDC countries?
     On 14 December 1960, 20 countries originally signed the Convention on the Organisation for Economic Co-operation and Development. Since then, 18 countries have become members of the Organisation.
 
-## Functionality and MVP's
+# Functionality and MVP's
 ---
 
     In life_expectancy visulizer, users will be able to:
 
     1) Access the the OEDC.org 2020 or latest data of life expectancy of birth, suicide rates of countries, potential years of life lost of countries per 100,1000 people.
     2) Interact with graphs, charts other data visuals with a variety of :hover and :click events.
-    3) See a variety of stylized representations of data.  Move the mouse on the world map, and a box will appear in the country where the mouse is located. Click the button on the right side of the map, users will be able to see a barchart which is represented the suicide rates, death from the cancer, potential years of life lost. 
+    3) See a variety of stylized representations of data.  Move the mouse on the world map, and a box will appear in the country where the mouse is located. Click the button on the right side of the map, users will be able to see three different type of charts which are represented the suicide rates, death from the cancer, potential years of life lost. 
 
     
 
-## Technologies, Libraries, and API's
+# Technologies, Libraries, and API's
 ---
     Google Chart Tools Are Powerful, Simple to Use, and Free.
 
@@ -57,7 +59,8 @@ Table of Contents
         google.charts.setOnLoadCallback(drawChart);
 ```
 
-    3) Create the data table in javascript file. You can create a simple table by the following example:
+    3) Draw chart:
+       data form javacript file:
 ```javascript
 
     function drawRegionsMap() {
@@ -115,7 +118,7 @@ Table of Contents
 
 
 
-## Other Resources
+# Other Resources
 ---
 * [OEDC Data](https://www.oecd.org/)
 * [Google Visualization API](https://developers.google.com/chart/interactive/docs/reference)

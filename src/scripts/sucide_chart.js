@@ -13,7 +13,7 @@ function handleQueryResponse(response) {
         return;
     }       
     var options = {
-        title: "Suicide Rates (Total, Per 100 000 persons, 2020 or latest available)",
+        title: "Suicide Rates (Total, Per 100,000 persons, 2020 or latest available)",
         titleTextStyle: {
             fontSize: 25,
         },

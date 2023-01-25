@@ -1,4 +1,4 @@
-# Life Expenctancy Data Visualization
+# Life Expectancy Data Visualization
 by [Xi Wang](https://www.linkedin.com/in/xi-wang-7b00bb25a/)
 
 A project build to visualize the OECD(Organization for Economic

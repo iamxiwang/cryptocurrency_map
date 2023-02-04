@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import url('./styles/category');
 @import url('./styles/chart_display');
@@ -7,28 +7,21 @@
 @import url('./scripts/title.css');
 
 body {
-    display:flex;
-    flex-direction: column;
-    background-color: #CACFD2;
-    margin: 40px;
-    padding: 20px;
+
+    background-color:black;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
 };
 
 // nav bar area
 
-// .nav_bar {
-//     box-sizing: boarder-box;
-//     margin: 0;
-//     padding: 0;
-//     // background-color: #CACFD2;
-   
-
-// }
+.nav_bar {
+    height:150px
+}
 
 li, a, button{
-    font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color:white;
     text-decoration: solid;
 
@@ -36,18 +29,22 @@ li, a, button{
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     // justify-content: first baseline;
     align-items: center;
-    position: fixed;
+    // position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
+    height:100px;
+    right:20px
+    // top: 0;
+    // left: 0;
 }
-.logo {
-    // cursor: pointer;
-    margin-right: auto;
-    height: 60px;
+.spining-world{
+    height:100px;
+    width: 100px;
+    margin-left: 40px;
+    margin-top: 50px;
+    
 }
 .nav_links {
     list-style:  none;
@@ -56,12 +53,13 @@ header {
     display: inline-block;
     
     border-radius: 100px;
+    padding: 7px 23px;
 }
 .nav_links li a {
     transition: all 0.3s  ease 0s;
-    color: #0088a9;
+    color: white;
     padding: 0px 20px;
-    font-size: 16px;
+    font-size: 20px;
     
 }
 
@@ -71,13 +69,14 @@ header {
 
 button {
     margin-left: 20px;
-    margin-right: auto;
+    margin-right: 20px;
     padding: 7px 23px;
-    background-color: rgba(0,136,169,1);
+    // background-color: rgba(0,136,169,1);
     border: none;
     border-radius: 50px;
     cursor:  pointer;
     transition: all 0.3s ease 0s;
+    background-color: black;
 }
 button:hover {
     background-color: gold;
@@ -115,21 +114,45 @@ button:hover {
     
 }
 
+.welcome-page{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    padding-top: 60px;
+    padding-left: 250px;
+    font-size: large;
+    // background-image: url('https://www.upstate.edu/whatsup/images/2021/051721-life-expectancy-has-dropped-why-it-matters.jpg');
+    // background-size: cover;
+    // width: 100%;
+
+}
+h1.welcome-largest{
+    font-size: 100px;
+}
+
+.dynamic-country{
+    display:flex
+}
 
 // main body css
 
 
 .map {
+    height: 100vh;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 1.2cm;
-    padding-right: 1.5cm;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 80px;
+   
+    // padding-left: 1.2cm;
+    // padding-right: 1.2cm;
 }
 #regions_div{
-    width: 750px; 
-    height: 500px;
-    margin: 0px;
+    width: 1350px; 
+    height: 600px;
+    margin-left:60px
 }
 
 #chart_div {
@@ -153,10 +176,47 @@ hr{
     height: 1px;
     background-color:#666;
 }
+#corgi{
+    color:red
+}
+
+.fa-arrow-down{
+    font-size: 60px;
+   
+}
 
 
+.arrow {
+    text-align: center;
+    margin: 4%;
+    padding-right:90px
+}
+.bounce {
+animation: bounce 2s infinite;
+}
 
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+}
+40% {
+    transform: translateY(-30px);
+}
+60% {
+    transform: translateY(-15px);
+}
+}
+p{
+    color:white
+}
 
+.google-visualization-tooltip{
 
+    border-radius: 20px !important;
+    background-color: #002162 !important;
+}
+.google-visualization-tooltip span{
+    color: white !important;
+}
 
 

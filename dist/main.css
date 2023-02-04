@@ -1,86 +1,453 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap);
-
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/category.css ***!
+  \*******************************************************************************************************/
+.middle-content{
+        height:110vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
 
 
 #category {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        font-family: 'Roboto', sans-serif;
 }
 
 
 #category button{
         display: inline-block;
-        font-size: 15px;
-        margin: 8px 20px;
+        font-size: 20px;
+        font-weight: 700;
+        height: 100px;
+        width: 200px;
+        margin-right: 20px;
         cursor: pointer;
         border: none;
-        border-radius: 30px;
+        border-radius: 6px;
         cursor:  pointer;
+        background-color: white;
+        color:black;
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+        /* margin: 20px; */
 }
+.typewriter{
+        margin-top: 200px;
+}
+.typewriter h1 {
+        color:white;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange; }
+}
+
 
 
 #category button:hover {
-        background-color:#ec8f6e;
+        background-color:yellow;
+}
+.parseData text {
+        fill:white !important;
+        font-size: 13px;
 }
 
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/chart_display.css ***!
+  \************************************************************************************************************/
 
 .parseData{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10;
-    padding-left: 20px;
+
+    /* padding-left: 20px; */
 }
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/mapLeft.css ***!
+  \******************************************************************************************************/
+.css-typing p {
+    border-right: .15em solid orange;
+    font-family: "Courier";
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .13em;
+  }
+  .css-typing p:nth-child(1) {
+    width: 50.3em;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(2) {
+    width: 43.5em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(3) {
+    width: 46.3em;
+    opacity: 0;
+    -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    animation: type3 3s steps(20, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 4s;
+    animation-delay: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+    }
+  }
 
 
 
 
-.detail {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1cm;
-    justify-content: space-between;
-    align-items: space-evenly;
-    font-weight: 500;
+
+.css-typing {
+    
+    margin: 100px;
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: #0088a9;
-    font-family: "Montserrat", sans-serif;
-    width: 100px;
+    letter-spacing: .13em;
 
+   
 }
-
-
-
-/* #countryname {
-    font-weight: 250;
-    font-size: 30px;
-    font-family: Fredoka One;
-    color: #0088a9;
-    text-decoration: solid;
-}
-
-#time, #human {
-    font-size: 20px;
-} */
-
-
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scripts/title.css ***!
+  \*****************************************************************************************************/
 
 #title {
     font-family: "Montserrat", sans-serif;
     display: flex;
     justify-content: center;
-    color: #0088a9;}
-    
+    color: white
+} 
+
 
 #corgi{
     text-align: left;
     width: 25vw;
     padding-left: 10px;
 }
-body{display:flex;flex-direction:column;background-color:#cacfd2;margin:40px;padding:20px}.nav_bar{box-sizing:boarder-box;margin:0;padding:0}li,a,button{font-family:"Montserrat",sans-serif;font-weight:500;font-size:16px;color:#fff;text-decoration:solid}header{display:flex;justify-content:flex-end;align-items:center;position:fixed;width:100%;top:0;left:0}.logo{margin-right:auto;height:60px}.nav_links{list-style:none}.nav_links li{display:inline-block;border-radius:100px}.nav_links li a{transition:all .3s ease 0s;color:#0088a9;padding:0px 20px;font-size:16px}.nav_links li a i{font-size:20px}button{margin-left:20px;margin-right:auto;padding:7px 23px;background-color:#0088a9;border:none;border-radius:50px;cursor:pointer;transition:all .3s ease 0s}button:hover{background-color:gold}#right1:hover{background-color:gold}#right2:hover{background-color:gold}#right3:hover{background-color:gold}.dropdown{display:none;position:absolute;background-color:#f1f1f1;min-width:100px;box-shadow:0px 8px 16px 0px rgba(0,0,0,.2);z-index:1}#right3:hover .dropdown{display:block;border-radius:15px}#right3 ul.dropdown li{display:block}.map{display:flex;justify-content:flex-end;align-items:center;padding-left:1.2cm;padding-right:1.5cm}#regions_div{width:750px;height:500px;margin:0px}#chart_div{width:1300px;height:550px;margin:0px}#middle{display:flex;flex-direction:column;align-items:center}h3{height:0px}hr{margin-left:auto;margin-right:auto;height:1px;background-color:#666}
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
+  \*****************************************************************************************************************************************/
+body {
+  background-color: black;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
 
-/*# sourceMappingURL=main.css.map*/
+.nav_bar {
+  height: 150px;
+}
+
+li, a, button {
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  text-decoration: solid;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  right: 20px;
+}
+
+.spining-world {
+  height: 100px;
+  width: 100px;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  border-radius: 100px;
+  padding: 7px 23px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+  color: white;
+  padding: 0px 20px;
+  font-size: 20px;
+}
+
+.nav_links li a i {
+  font-size: 20px;
+}
+
+button {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 7px 23px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: black;
+}
+
+button:hover {
+  background-color: gold;
+}
+
+#right1:hover {
+  background-color: gold;
+}
+
+#right2:hover {
+  background-color: gold;
+}
+
+#right3:hover {
+  background-color: gold;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#right3:hover .dropdown {
+  display: block;
+  border-radius: 15px;
+}
+
+#right3 ul.dropdown li {
+  display: block;
+}
+
+.welcome-page {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-top: 60px;
+  padding-left: 250px;
+  font-size: large;
+}
+
+h1.welcome-largest {
+  font-size: 100px;
+}
+
+.dynamic-country {
+  display: flex;
+}
+
+.map {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 80px;
+}
+
+#regions_div {
+  width: 1350px;
+  height: 600px;
+  margin-left: 60px;
+}
+
+#chart_div {
+  width: 1300px;
+  height: 550px;
+  margin: 0px;
+}
+
+#middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  height: 0px;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: #666;
+}
+
+#corgi {
+  color: red;
+}
+
+.fa-arrow-down {
+  font-size: 60px;
+}
+
+.arrow {
+  text-align: center;
+  margin: 4%;
+  padding-right: 90px;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+p {
+  color: white;
+}
+
+.google-visualization-tooltip {
+  border-radius: 20px !important;
+  background-color: #002162 !important;
+}
+
+.google-visualization-tooltip span {
+  color: white !important;
+}

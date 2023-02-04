@@ -1,25 +1,71 @@
-
+.middle-content{
+        height:110vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
 
 
 #category {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        font-family: 'Roboto', sans-serif;
 }
 
 
 #category button{
         display: inline-block;
-        font-size: 15px;
-        margin: 8px 20px;
+        font-size: 20px;
+        font-weight: 700;
+        height: 100px;
+        width: 200px;
+        margin-right: 20px;
         cursor: pointer;
         border: none;
-        border-radius: 30px;
+        border-radius: 6px;
         cursor:  pointer;
+        background-color: white;
+        color:black;
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+        /* margin: 20px; */
+}
+.typewriter{
+        margin-top: 200px;
+}
+.typewriter h1 {
+        color:white;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange; }
 }
 
 
+
 #category button:hover {
-        background-color:#ec8f6e;
+        background-color:yellow;
+}
+.parseData text {
+        fill:white !important;
+        font-size: 13px;
 }

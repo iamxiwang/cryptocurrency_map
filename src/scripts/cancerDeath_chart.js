@@ -24,7 +24,7 @@ function handleQueryResponse(response) {
         colors: ["#16537e","#d4af37","#f1dede" ,"#cfe8ef","#f5dd90","#e5f9e0",
                     "#995253","#002fa7","#c5987b","#f1c800" ,"#e2679f","#735e7d","#133337","#ff5733","#85bb65","#394c1e","#85bb65"],
 
-        backgroundColor: {fill: '#CACFD2'},
+        backgroundColor: {fill: '#000000'},
         is3D: true,
         
         animation: {"startup": true, duration: 1000,
@@ -49,7 +49,7 @@ function cancerHandler(e){
     chartDisplay.childNodes.forEach(node => node.remove())
     let newChart = document.createElement("div");
     newChart.id = "secondchart";
-    newChart.style = "width: 1600px; height: 870px;"
+    newChart.style = "width: 1400px; height: 400px;"
    
     chartDisplay.appendChild(newChart)
     google.charts.setOnLoadCallback(drawColumnChart);

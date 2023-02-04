@@ -20,7 +20,7 @@ function handleQueryResponse(response) {
             fontSize: 20,
         },
         colors: ["#088da5"],
-        backgroundColor: {fill: '#CACFD2'},
+        backgroundColor: {fill: '#000000'},
 
         animation: {"startup": true, duration: 2000,
         easing: 'out',
@@ -45,7 +45,7 @@ function lostHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "thirdchart";
-    newChart.style = "width: 1600px; height: 870px;"
+    newChart.style = "width: 1200px; height: 400px;"
     
     chartDisplay.appendChild(newChart)
 

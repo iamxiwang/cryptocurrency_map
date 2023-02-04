@@ -15,10 +15,10 @@ function handleQueryResponse(response) {
     var options = {
         title: "Suicide Rates (Total, Per 100,000 persons, 2020 or latest available)",
         titleTextStyle: {
-            fontSize: 25,
+            fontSize: 20,
         },
         colors: ["#088da5"],
-        backgroundColor: {fill: '#CACFD2'},
+        backgroundColor: {fill: '#000000'},
 
         animation: {"startup": true, duration: 2000,
         easing: 'out'
@@ -43,7 +43,7 @@ function suicideHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "firstchart";
-    newChart.style = "width: 1650px; height: 880px;"
+    newChart.style = "width: 1200px; height: 400px;"
     
     chartDisplay.appendChild(newChart)
 

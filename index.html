@@ -11,7 +11,7 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="./dist/main.js" defer></script>
         <script src="https://kit.fontawesome.com/6cc95cf3ca.js" crossorigin="anonymous"></script>
-       
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
 
         <title>Life Expectancy Data Visualization </title>
     </head>
@@ -19,73 +19,74 @@
     <body>
         <div class="nav_bar">
             <header>
-                <!-- <div class= "logo"><i class="fa-brands fa-square-js"></i> JavaScript Project</div> -->
+            <div>
+               <img class="spining-world" src="https://1.bp.blogspot.com/-Os_G7fBordU/W1dFCdFA3AI/AAAAAAAAp-I/NLfM0h9Nvw42dtkvBlgzC_1_QFmKHBEVgCLcBGAs/s1600/world_flags_globe_1.gif" alt="">
+             
+            </div>
                 <nav>
                     <ul class="nav_links">
                         <li id="right1"><a href="https://github.com/iamxiwang" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
                         <li id="right2"><a href="https://www.linkedin.com/in/xi-wang-7b00bb25a/" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkdin</a></li>
-                        <!-- <li id="right3">
-                            <a href="#" target="_blank"> Project &#9662</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                            </ul>
-                        
-                        
-                        </li> -->
+                        <a class="cta" href="mailto:vivian.xi.wang@gmail.com"><button>Contact</button></a>
                     </ul>
                 </nav>
-                <a class="cta" href="mailto:vivian.xi.wang@gmail.com"><button>Contact</button></a>
             </header>
         </div>
-        <div id="title">
-            <h1>Life Expectancy for OEDC Countries  <i class="fa-sharp fa-solid fa-earth-americas"></i> </h1>
-            <h1 id="corgi">United States</h1>
+        
+        <div class="welcome-page">
+            <h1 class="welcome-largest">Welcome to Life Expectancy </h1>
+            <div class="dynamic-country">
+                <h1>Life Expectancy for OEDC Countries  <i class="fa-sharp fa-solid fa-earth-americas"></i> </h1>
+                <h1 id="corgi">United States</h1>
+            </div>
+            <!-- <div class="arrow bounce">
+                <a class="fa fa-arrow-down fa-2x" href="#"></a>
+              </div> -->
+        </div>
+        <div class="css-typing">
+            <p>
+                The Organization for Economic Co-operation and Development (OECD)is a unique forum
+            </p>
+            <p>
+                Where the governments of 37 democracies with market-based economies
+            </p>
+            <p>
+                Collaborate to develop policy standards to promote sustainable economic growth.
+            </p>
         </div>
         <div class="map">
-            <div class="detail">
-                <div id="click">Move Mouse to Map <i class="fa-solid fa-hand-point-right"></i>
-                </div>
-                
-                <br>
-                <div id ="countryname"></div><br>
-                <div id="time">
-                    <div id="life"></div>
-                    <div id="homecide_rate"></div>
-                </div>
-                <div id="human">
-                    <div id="fertility"></div>
-                    <div id="infant_mortality"></div>
-                </div>   
-            </div>
-        
+     
             <div id="middle">
                 <div id="regions_div"></div>
                 <p> OECD (2022), Life expectancy at birth (indicator). doi: 10.1787/27e0fc9d-en (Accessed on 05 December 2022)</p>
             </div>
-           
+        
     
-            <div id="category">
-                <a class="cta"  id="suicide"><button>Suicide Rate</button></a>
-               
-                <a class="cta" id="cancer"><button>Death from Cancer</button></a>
-                <a class="cta"  id="lost"><button>Potential Life Lost</button></a>
-            </div>
         </div>
-    
+        
     </div>
-    
-    
 
+    <div class="middle-content">
+        <div class="typewriter">
+            <h1>Click to visualize the data.</h1>
+        </div>
+           <!-- <div class="arrow bounce">
+                <a class="fa fa-arrow-down fa-2x" href="#"></a>
+              </div> -->
+        <div id="category">
+            <button id="suicide">Suicide Rate</button>
 
-    <div class="parseData" >
+            <button id="cancer">Death from Cancer</button>
+            <button  id="lost">Potential Life Lost</button>
+        </div>
+        <div class="parseData" >
+        </div>
     </div>
 
     </body>
-    <footer>
+    <!-- <footer>
         <hr>
     <p>© OEDC Organisation for Economic Co-operation and Development</p>
-    </footer>
+    </footer> -->
 
 </html>

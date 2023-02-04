@@ -5,14 +5,16 @@ import popChart from "./scripts/newEmbed.js";
 import drawChart from "./scripts/cancerDeath_chart.js";
 import banana from './scripts/sucide_chart.js';
 import lostYears from './scripts/lostYears.js'
+// import dotenv from 'dotenv'
 import { _changeText, _getChangedText} from './scripts/dynamicCountry'
-
+// dotenv.config()
 window.fetchCountry = fetchCountry;
 window.popChart = popChart;
 
         google.charts.load('current', {
         'packages':['geochart'],
-        'mapsApiKey': 'AIzaSyCdzK1NYD375q2eB-NknjM36fNhR0ml4_M'
+        'mapsApiKey':''
+
         
         });
         google.charts.setOnLoadCallback(drawRegionsMap);
@@ -75,8 +77,10 @@ window.popChart = popChart;
 
             var options = {
                 title: 'Toppings I Like On My Pizza',
-                colors: ['#f7e3dc','#f5d4c9','#f6c7b6','#ec8f6e','#db3800' ],
-                backgroundColor: {fill: '#CACFD2'}}
+                tooltip: { isHtml: true },
+                // colors:['#ff9a40','#8c2121','#65b47d','#e6eb63','#3a42ef'],
+                colors: ['#ffff00','#ccff00','#00ff00','#f08080','#cc0000' ],
+                backgroundColor: {fill: '#000000'}}
 
             var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
             

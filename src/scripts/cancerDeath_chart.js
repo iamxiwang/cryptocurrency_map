@@ -17,22 +17,23 @@ function handleQueryResponse(response) {
     }       
     var options = {
         title: "Deaths from Cancer (Total Per 100,000 persons)",
+        tooltip: { isHtml: true },
         titleTextStyle: {
             fontSize: 20,
           },
         colors: ["#088da5"],
-        colors: ["#16537e","#d4af37","#f1dede" ,"#cfe8ef","#f5dd90","#e5f9e0",
-                    "#995253","#002fa7","#c5987b","#f1c800" ,"#e2679f","#735e7d","#133337","#ff5733","#85bb65","#394c1e","#85bb65"],
+        // colors: ["#16537e","#d4af37","#f1dede" ,"#cfe8ef","#f5dd90","#e5f9e0",
+        //             "#995253","#002fa7","#c5987b","#f1c800" ,"#e2679f","#735e7d","#133337","#ff5733","#85bb65","#394c1e","#85bb65"],
 
         backgroundColor: {fill: '#000000'},
-        is3D: true,
+        // is3D: true,
         
         animation: {"startup": true, duration: 1000,
         easing: 'out'}
         }
 
     var data = response.getDataTable();
-    var chart = new google.visualization.PieChart(document.getElementById('secondchart'));
+    var chart = new google.visualization.ColumnChart(document.getElementById('secondchart'));
     chart.draw(data, options);
 }
 
@@ -49,11 +50,11 @@ function cancerHandler(e){
     chartDisplay.childNodes.forEach(node => node.remove())
     let newChart = document.createElement("div");
     newChart.id = "secondchart";
-    newChart.style = "width: 1400px; height: 400px;"
+    newChart.style = "width: 1000px; height: 310px;"
    
     chartDisplay.appendChild(newChart)
     google.charts.setOnLoadCallback(drawColumnChart);
-    document.querySelector("#secondchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    // document.querySelector("#secondchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 }
 
 

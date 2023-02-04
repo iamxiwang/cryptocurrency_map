@@ -14,6 +14,7 @@ function handleQueryResponse(response) {
     }       
     var options = {
         title: "Suicide Rates (Total, Per 100,000 persons, 2020 or latest available)",
+        tooltip: { isHtml: true },
         titleTextStyle: {
             fontSize: 20,
         },
@@ -43,13 +44,13 @@ function suicideHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "firstchart";
-    newChart.style = "width: 1200px; height: 400px;"
+    newChart.style = "width: 1000px; height: 310px;"
     
     chartDisplay.appendChild(newChart)
 
     
     google.charts.setOnLoadCallback(drawColumnChart);
-    document.querySelector("#firstchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    // document.querySelector("#firstchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 }
 
 

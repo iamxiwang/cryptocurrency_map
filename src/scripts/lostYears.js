@@ -16,6 +16,7 @@ function handleQueryResponse(response) {
     }       
     var options = {
         title: "Potential years of life lost (Total, Per 100,000 inhabitants aged 0-69, 2020 or latest available)",
+        tooltip: { isHtml: true },
         titleTextStyle: {
             fontSize: 20,
         },
@@ -28,7 +29,7 @@ function handleQueryResponse(response) {
     }
 
     var data = response.getDataTable();
-    var chart = new google.visualization.BarChart(document.getElementById('thirdchart'));
+    var chart = new google.visualization.ColumnChart(document.getElementById('thirdchart'));
     chart.draw(data, options);
 }
 
@@ -45,14 +46,14 @@ function lostHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "thirdchart";
-    newChart.style = "width: 1200px; height: 400px;"
+    newChart.style = "width: 1000px; height: 310px;"
     
     chartDisplay.appendChild(newChart)
 
     
     google.charts.setOnLoadCallback(drawColumnChart);
 
-    document.querySelector("#thirdchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    // document.querySelector("#thirdchart").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 }
 
 

@@ -41,7 +41,7 @@
         /* margin: 20px; */
 }
 .typewriter{
-        margin-top: 200px;
+        margin-top: 150px;
 }
 .typewriter h1 {
         color:white;
@@ -88,6 +88,10 @@ from, to { border-color: transparent }
     align-items: center;
 
     /* padding-left: 20px; */
+}
+
+#firstchart, #secondchart, #thirdchart{
+    margin-left: 50px;
 }
 /*!******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/mapLeft.css ***!

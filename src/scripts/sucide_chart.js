@@ -18,10 +18,10 @@ function handleQueryResponse(response) {
         titleTextStyle: {
             fontSize: 20,
         },
-        colors: ["#088da5"],
+        colors: ["red"],
         backgroundColor: {fill: '#000000'},
 
-        animation: {"startup": true, duration: 2000,
+        animation: {"startup": true, duration: 1000,
         easing: 'out'
         }
     }

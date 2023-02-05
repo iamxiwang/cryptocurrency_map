@@ -21,7 +21,7 @@ function handleQueryResponse(response) {
         titleTextStyle: {
             fontSize: 20,
           },
-        colors: ["#088da5"],
+        colors: ["yellow"],
         // colors: ["#16537e","#d4af37","#f1dede" ,"#cfe8ef","#f5dd90","#e5f9e0",
         //             "#995253","#002fa7","#c5987b","#f1c800" ,"#e2679f","#735e7d","#133337","#ff5733","#85bb65","#394c1e","#85bb65"],
 

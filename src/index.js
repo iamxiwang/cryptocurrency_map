@@ -148,6 +148,23 @@ window.popChart = popChart;
         // })
         // setInterval(myTimer, 1000);
         setInterval(_changeText, 1000);
+         
+        // creates a listener to the "start" button
+        const btnStart = document.querySelector(".welcome-page button")
+        const mapArea = document.getElementById("mapArea")
+        btnStart.addEventListener("click",function (e) {
+            e.preventDefault();
+            mapArea.scrollIntoView();
+        })
+
+        const btnLearnMore = document.querySelector("#btn-learnmore")
+        const chart = document.getElementById("chart")
+
+        btnLearnMore.addEventListener("click",function (e) {
+            e.preventDefault();
+            chart.scrollIntoView();
+        })
+
 
 
 

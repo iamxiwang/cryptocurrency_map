@@ -1,4 +1,4 @@
-.css-typing p {
+/* .css-typing p {
     border-right: .15em solid orange;
     font-family: "Courier";
     font-size: 24px;
@@ -126,19 +126,23 @@
     50% {
       border-color: tranparent;
     }
-  }
+  } */
 
 
 
-
+#mapArea{
+  padding-top: 30px;
+  height: 100vh;
+}
 
 .css-typing {
-    
-    margin: 100px;
+    margin-left: 100px;
+    margin-right: 60px;
     margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     letter-spacing: .13em;
-
-   
+}
+.css-typing p{
+  line-height: 2em;
 }

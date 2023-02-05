@@ -1,5 +1,5 @@
 .middle-content{
-        height:110vh;
+        height:100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -10,8 +10,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40vh;
+        height: 27vh;
         font-family: 'Roboto', sans-serif;
+        padding-top:50px
 }
 
 
@@ -21,7 +22,7 @@
         font-weight: 700;
         height: 100px;
         width: 200px;
-        margin-right: 20px;
+        margin-right: 40px;
         cursor: pointer;
         border: none;
         border-radius: 6px;
@@ -31,7 +32,7 @@
         border: 1px solid;
         padding: 10px;
         box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
-        /* margin: 20px; */
+        letter-spacing: 0.125em;
 }
 .typewriter{
         margin-top: 150px;

@@ -3,10 +3,9 @@ by [Xi Wang](https://www.linkedin.com/in/xi-wang-7b00bb25a/)
 
 A project build to visualize the OECD(Organization for Economic
 Co-operation and Development) countries's life expectancy at birth
-Live Link:
+[Live Link](https://iamxiwang.github.io/life_expectancy/)
 
 Table of Contents
----
 ---
 1) Background
 
@@ -17,35 +16,31 @@ Table of Contents
 4) Other Resources
 
 
-# Backgroud
----
+## Backgroud
 
-    Life expectancy at birth is defined as how long, on average, a newborn can expect to live.
-    Deaths from cancer. There are more than 100 different types of cancers. For a large number of cancer types, the risk of developing the disease rises with age. 
-    Potential Years of Life Lost (PYLL) involves summing up deaths occurring at each age and multiplying this with the number of remaining years to live up to a selected age limit (age 75 is used in OECD Health Statistics).
 
-    I build this project using vanila javascript, google chart to visualize the data from OEDC.org countries life related data
-    The data of this project is from OEDC.org.The OECD Data is a database containing hundreds of statistical time series for the Organization for Economic Cooperation and Development (OECD) and selected non-member counties. It covers broad topics including agriculture, development, education, employment, energy, environment, finance, health, and government. It also allows us to explore the data by country. Available data file formats CSV
+The Organization for Economic Co-operation and Development (OECD) was established in 1960 with 20 signatory countries. Today, 18 countries are members of the OECD.
+
+One of the important metrics that the OECD tracks is life expectancy at birth. This is the average amount of time a newborn can expect to live. The OECD also tracks deaths caused by various types of cancer. Cancer is a complex disease with more than 100 different forms, and the risk of developing it increases with age. The Potential Years of Life Lost (PYLL) metric takes into account the age at which people die from cancer and the number of remaining years they would have lived, assuming a maximum limit of 75 years.
+
+This project is built using vanilla JavaScript and Google Charts to visualize the life-related data from the OECD. The data is sourced from the OECD database, which contains hundreds of statistical time series for the organization and selected non-member countries. The database covers a wide range of topics such as agriculture, education, energy, health, and government, and allows for data exploration by country. The available data is in the form of CSV files.
    
-    What is OEDC countries?
-    On 14 December 1960, 20 countries originally signed the Convention on the Organisation for Economic Co-operation and Development. Since then, 18 countries have become members of the Organisation.
-
-# Functionality and MVP's
----
-
-    In life_expectancy visulizer, users will be able to:
-
-    1) Access the the OEDC.org 2020 or latest data of life expectancy of birth, suicide rates of countries, potential years of life lost of countries per 100,1000 people.
-    2) Interact with graphs, charts other data visuals with a variety of :hover and :click events.
-    3) See a variety of stylized representations of data.  Move the mouse on the world map, and a box will appear in the country where the mouse is located. Click the button on the right side of the map, users will be able to see three different type of charts which are represented the suicide rates, death from the cancer, potential years of life lost. 
-
     
 
-# Technologies, Libraries, and API's
----
-    Google Chart Tools Are Powerful, Simple to Use, and Free.
+## Functionality and MVP's
 
-    1) Put in html <head> section, loading the charts library (This line of code Load the AJAX API.)
+The Life Expectancy Visualizer allows users to access the latest data from the OECD on various life-related metrics. With this tool, users can:
+
++ View the life expectancy at birth, suicide rates, and Potential Years of Life Lost (PYLL) per 100,000 people of various countries.
++ Interact with the data using dynamic and interactive graphs, charts, and data visualizations. Users can explore the data by hovering over different regions and clicking on specific countries to view more detailed information.
++ See the data presented in a variety of stylized and visually appealing representations, including world maps and bar graphs. By moving the mouse over the world map, users can see a box highlighting the country under the cursor. Additionally, by clicking on the button to the right of the map, users can access three different types of charts showcasing the suicide rates, death from cancer, and PYLL of various countries.
+
+## Technologies, Libraries, and API's
+
+### Google Chart Tools Are Powerful, Simple to Use, and Free.
+
+#### In html <head> section, add this two lines. loading the charts library (This line of code Load the AJAX API.)
+    
 ```html
     <head>
         <script src="https://www.gstatic.com/charts/loader.js"></script>
@@ -53,13 +48,14 @@ Table of Contents
     </head>
 ```
 
-    2)  Load the Visualization API and the chart package. Set a callback to run when the Google Visualization API is loaded.
+#### Load the Visualization API and the chart package. Set a callback to run when the Google Visualization API is loaded.
+
 ```javascript
         google.charts.load('current', {'packages':['type_of_chart']});
         google.charts.setOnLoadCallback(drawChart);
 ```
 
-    3) Draw chart:
+#### Draw chart:
        data form javacript file:
 ```javascript
 
@@ -78,7 +74,8 @@ Table of Contents
     }
 ```
 
-        Or You can build it from google spreed sheets:
+#### Or You can build it from google spreed sheets:
+
 ```javascript
         
     let URL ="Your_URL"
@@ -110,16 +107,10 @@ Table of Contents
         var chart = new google.visualization.PieChart(document.getElementById('secondchart'));
         chart.draw(data, options);
     }
-
-
 ```
 
-    
 
-
-
-# Other Resources
----
+## Other Resources
 * [OEDC Data](https://www.oecd.org/)
 * [Google Visualization API](https://developers.google.com/chart/interactive/docs/reference)
 * [Emoji Tools](https://fontawesome.com/)

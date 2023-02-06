@@ -1,9 +1,7 @@
 # Life Expectancy Data Visualization
-by [Xi Wang](https://www.linkedin.com/in/xi-wang-7b00bb25a/)
 
-A project build to visualize the OECD(Organization for Economic
-Co-operation and Development) countries's life expectancy at birth
-[Live Link](https://iamxiwang.github.io/life_expectancy/)
+This project, built to visualize the life expectancy at birth from the Organization for Economic Co-operation and Development (OECD), provides a unique and interactive experience for users.
+[Check it out now!](https://iamxiwang.github.io/life_expectancy/)
 
 Table of Contents
 ---

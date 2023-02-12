@@ -118,6 +118,8 @@ button:hover {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
     color: white;
     padding-top: 11vh;
     // padding-bottom: 40px;
@@ -158,6 +160,7 @@ h1.welcome-largest{
     overflow: hidden;
     margin-top: 20px;
     margin-left: 0;
+    margin-bottom: 10vh;
 }
 
 #btn-learnmore{

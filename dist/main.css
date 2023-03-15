@@ -519,11 +519,18 @@ p {
     width: 50px;
     margin-top: 0px;
   }
+  .cta {
+    display: none;
+  }
+  .welcome-page {
+    height: 70vh;
+  }
   h1.welcome-largest {
     font-size: 40px;
   }
   .dynamic-country h1 {
-    font-size: 17px;
+    font-size: 22px;
+    width: 50vw;
   }
   .dynamic-country {
     display: flex;
@@ -532,9 +539,24 @@ p {
   .nav_links li {
     display: inline-block;
     border-radius: 100px;
-    padding: 7px 23px;
+    padding: 7px 0px;
   }
   #corgi {
-    text-align: center;
+    width: 50vw;
+    font-size: 20px;
+  }
+  .css-typing {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.13em;
+  }
+  #regions_div {
+    width: 85vw;
+    height: 69vh;
+    margin-left: 10px;
+    margin-top: 10px;
   }
 }

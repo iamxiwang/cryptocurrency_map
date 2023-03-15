@@ -550,7 +550,7 @@ p {
     margin-right: 30px;
     margin-bottom: 0px;
     font-family: "Roboto", sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.13em;
   }
   #regions_div {
@@ -558,5 +558,11 @@ p {
     height: 69vh;
     margin-left: 10px;
     margin-top: 10px;
+  }
+  button#start-btn {
+    height: 2.75rem;
+    width: 150px;
+    font-size: 0.8rem;
+    margin-bottom: 1vh;
   }
 }

@@ -270,3 +270,33 @@ p{
 }
 
 
+
+
+@media (max-width:700px) {
+    .spining-world {
+
+        height: 50px;
+        width: 50px;
+        margin-top: 0px;
+    }
+
+    h1.welcome-largest {
+        font-size: 40px;
+    }
+
+    .dynamic-country h1{
+        font-size: 17px;
+    }
+    .dynamic-country {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_links li {
+        display: inline-block;
+        border-radius: 100px;
+        padding: 7px 23px;
+    }
+    #corgi{
+        text-align: center;
+    }
+}

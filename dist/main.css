@@ -576,11 +576,17 @@ p {
     width: 100vw;
   }
   #category {
-    flex-direction: column;
-    height: 20vh;
-    justify-content: space-between;
+    height: 10vh;
+    justify-content: space-around;
   }
   #category button {
-    height: 50px;
+    height: 60px;
+    font-size: 12px;
+    width: 100px;
+    margin-right: 5px;
+  }
+  .typewriter {
+    width: 80vw;
+    font-size: 10px;
   }
 }

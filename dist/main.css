@@ -527,9 +527,11 @@ p {
   }
   h1.welcome-largest {
     font-size: 40px;
+    padding-right: 0px;
+    width: 50vw;
   }
   .dynamic-country h1 {
-    font-size: 22px;
+    font-size: 12px;
     width: 50vw;
   }
   .dynamic-country {
@@ -556,13 +558,29 @@ p {
   #regions_div {
     width: 85vw;
     height: 69vh;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
   }
   button#start-btn {
     height: 2.75rem;
     width: 150px;
     font-size: 0.8rem;
     margin-bottom: 1vh;
+  }
+  #btn-learnmore {
+    font-size: 0.5rem;
+  }
+  #middle p {
+    font-size: 13px;
+    margin-left: 15px;
+    width: 100vw;
+  }
+  #category {
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-between;
+  }
+  #category button {
+    height: 50px;
   }
 }

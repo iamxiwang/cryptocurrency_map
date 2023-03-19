@@ -44,7 +44,7 @@ function suicideHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "firstchart";
-    newChart.style = "width: 1000px; height: 310px;"
+    // newChart.style = "width: 1000px; height: 310px;"
     
     chartDisplay.appendChild(newChart)
 

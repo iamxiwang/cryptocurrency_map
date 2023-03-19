@@ -93,6 +93,18 @@ from, to { border-color: transparent }
 
 #firstchart, #secondchart, #thirdchart{
     margin-left: 50px;
+    width: 1000px; 
+    height: 310px;
+}
+
+@media (max-width:700px) {
+    #firstchart, #secondchart, #thirdchart{
+        margin-left: 10px;
+        margin-top: 30px;
+        width: 500px; 
+        height: 310px;
+    }
+    
 }
 /*!******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/mapLeft.css ***!
@@ -587,9 +599,9 @@ p {
   }
   .typewriter {
     width: 80vw;
-    font-size: 10px;
+    font-size: 13px;
   }
   div#firstchar {
-    width: 80vw !important;
+    width: 80vw;
   }
 }

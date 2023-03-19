@@ -50,7 +50,7 @@ function cancerHandler(e){
     chartDisplay.childNodes.forEach(node => node.remove())
     let newChart = document.createElement("div");
     newChart.id = "secondchart";
-    newChart.style = "width: 1000px; height: 310px;"
+    // newChart.style = "width: 1000px; height: 310px;"
    
     chartDisplay.appendChild(newChart)
     google.charts.setOnLoadCallback(drawColumnChart);

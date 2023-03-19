@@ -46,7 +46,7 @@ function lostHandler(e){
     };
     let newChart = document.createElement("div");
     newChart.id = "thirdchart";
-    newChart.style = "width: 1000px; height: 310px;"
+    // newChart.style = "width: 1000px; height: 310px;"
     
     chartDisplay.appendChild(newChart)
 
